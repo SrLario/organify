@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".CalculateGasolineScreen">
 
+    //Dialog car consumption Button
+    <Button
+        android:id="@+id/dialog_car_consumption_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="#000000"
+        app:icon="@drawable/arrow_down_list"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
