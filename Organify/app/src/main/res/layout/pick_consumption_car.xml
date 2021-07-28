@@ -1,20 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    //Icon Utilitario
     <ImageView
         android:id="@+id/utilitario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="128dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"
         android:src="@drawable/car_consumption_utilitario"
-        android:clickable="true"
-        android:focusable="true" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //Icon Compacto
     <ImageView
-        android:id="@+id/berlina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/car_consumption_berlina"
+        android:id="@+id/compacto"
+        android:layout_width="128dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:src="@drawable/car_consumption_compacto"
+        app:layout_constraintStart_toEndOf="@+id/utilitario"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //Icon Familiar
+    <ImageView
+        android:id="@+id/familiar"
+        android:layout_width="128dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/car_consumption_familiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/compacto"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    //Icon Coupe
+    <ImageView
+    android:id="@+id/coupe"
+    android:layout_width="128dp"
+    android:layout_height="77dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:src="@drawable/car_consumption_coupe"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/utilitario" />
+
+
+    //Icon Berlina
+    <ImageView
+    android:id="@+id/berlina"
+    android:layout_width="128dp"
+    android:layout_height="77dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginTop="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:src="@drawable/car_consumption_berlina"
+    app:layout_constraintStart_toEndOf="@+id/coupe"
+    app:layout_constraintTop_toBottomOf="@+id/compacto" />
+
+    //Icon SUV
+    <ImageView
+        android:id="@+id/suv"
+        android:layout_width="128dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/car_consumption_suv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/berlina"
+        app:layout_constraintTop_toBottomOf="@+id/familiar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </LinearLayout>
