@@ -7,22 +7,28 @@
     tools:context=".NewTravel">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
         android:orientation="vertical"
-        android:gravity="center">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         //GASOLINE
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/gasoline_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:gravity="center"
             android:background="@drawable/round_border"
             android:backgroundTint="#81C234"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -47,16 +53,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         //FOOD
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/auto_gas"
-            android:background="@drawable/round_border"
-            android:orientation="horizontal"
             android:layout_margin="15dp"
-            android:gravity="center"
+            android:background="@drawable/round_border"
+            android:backgroundTint="@color/auto_gas"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView2"
@@ -81,16 +88,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         //PERSONS
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/round_border"
             android:backgroundTint="#2196F3"
-            android:gravity="center"
-            android:orientation="horizontal"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -114,16 +122,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         //ACTIVITIES
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:background="@drawable/round_border"
             android:backgroundTint="#E83C3C"
-            android:orientation="horizontal"
-            android:layout_margin="15dp"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -148,16 +157,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         //STAY
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="15dp"
             android:background="@drawable/round_border"
             android:backgroundTint="#F1C011"
-            android:orientation="horizontal"
-            android:layout_margin="15dp"
-            android:gravity="center"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
