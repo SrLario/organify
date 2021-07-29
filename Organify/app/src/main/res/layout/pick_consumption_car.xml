@@ -5,7 +5,8 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:backgroundTint="?attr/background_color_grey">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,7 +24,8 @@
             android:focusable="true"
             android:src="@drawable/car_consumption_utilitario"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_utilitario"
             android:layout_width="128dp"
@@ -32,6 +34,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Utilitario"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +52,8 @@
             android:focusable="true"
             android:src="@drawable/car_consumption_compacto"
             app:layout_constraintStart_toEndOf="@+id/utilitario"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_compacto"
             android:layout_width="128dp"
@@ -58,6 +62,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Compacto"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/text_utilitario"
@@ -78,7 +83,8 @@
             android:src="@drawable/car_consumption_familiar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/compacto"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_familiar"
             android:layout_width="128dp"
@@ -87,6 +93,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Familiar"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +111,8 @@
             android:focusable="true"
             android:src="@drawable/car_consumption_coupe"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_utilitario" />
+            app:layout_constraintTop_toBottomOf="@+id/text_utilitario"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_coupe"
             android:layout_width="128dp"
@@ -113,6 +121,7 @@
             android:layout_marginLeft="4dp"
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Coupé"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +139,8 @@
             android:focusable="true"
             android:src="@drawable/car_consumption_berlina"
             app:layout_constraintStart_toEndOf="@+id/coupe"
-            app:layout_constraintTop_toBottomOf="@+id/text_compacto" />
+            app:layout_constraintTop_toBottomOf="@+id/text_compacto"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_berlina"
             android:layout_width="128dp"
@@ -139,6 +149,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Berlina"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/text_coupe"
@@ -159,7 +170,8 @@
             android:src="@drawable/car_consumption_suv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/berlina"
-            app:layout_constraintTop_toBottomOf="@+id/text_familiar" />
+            app:layout_constraintTop_toBottomOf="@+id/text_familiar"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_suv"
             android:layout_width="128dp"
@@ -167,6 +179,7 @@
             android:layout_marginTop="65dp"
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
+            android:textColor="?attr/text_color"
             android:gravity="center_horizontal"
             android:text="SUV"
             android:textAlignment="center"
@@ -175,7 +188,7 @@
 
         //TODOTERRNO
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/todoterreno"
             android:layout_width="128dp"
             android:layout_height="77dp"
             android:layout_marginStart="4dp"
@@ -185,7 +198,8 @@
             android:focusable="true"
             android:src="@drawable/car_consumption_todoterreno"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_coupe" />
+            app:layout_constraintTop_toBottomOf="@+id/text_coupe"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_todoterreno"
             android:layout_width="128dp"
@@ -195,15 +209,16 @@
             android:layout_marginTop="65dp"
             android:layout_marginBottom="16dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Todoterreno"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintTop_toTopOf="@+id/todoterreno" />
 
         //MONOVOLUMEN
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/monovolumen"
             android:layout_width="128dp"
             android:layout_height="77dp"
             android:layout_marginStart="8dp"
@@ -212,8 +227,9 @@
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/car_consumption_monovolumen"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/text_berlina" />
+            app:layout_constraintStart_toEndOf="@+id/todoterreno"
+            app:layout_constraintTop_toBottomOf="@+id/text_berlina"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_monovolumen"
             android:layout_width="128dp"
@@ -222,14 +238,15 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
-            android:text="Coupé"
+            android:textColor="?attr/text_color"
+            android:text="Monovolumen"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/text_todoterreno"
-            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+            app:layout_constraintTop_toTopOf="@+id/monovolumen" />
 
         //FURGONETA
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/furgoneta"
             android:layout_width="128dp"
             android:layout_height="77dp"
             android:layout_marginTop="8dp"
@@ -239,7 +256,8 @@
             android:focusable="true"
             android:src="@drawable/car_consumption_furgoneta"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_suv" />
+            app:layout_constraintTop_toBottomOf="@+id/text_suv"
+            app:tint="?attr/text_color" />
         <TextView
             android:id="@+id/text_furgoneta"
             android:layout_width="128dp"
@@ -248,10 +266,11 @@
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:gravity="center_horizontal"
+            android:textColor="?attr/text_color"
             android:text="Furgoneta"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageView7" />
+            app:layout_constraintTop_toTopOf="@+id/furgoneta" />
 
 
 

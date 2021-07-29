@@ -167,6 +167,21 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <Button
+            android:id="@+id/calculate_cost_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="65dp"
+            android:text="calcular coste"
+            android:textSize="20sp"
+            style="?attr/materialButtonOutlinedStyle"
+            android:textColor="?attr/text_color"
+            app:strokeColor="?attr/button_color"
+            android:backgroundTint="?attr/background_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     //Dialog car consumption Button
