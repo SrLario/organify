@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CalculateGasolineScreen"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
+    android:background="?attr/background_color">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:text="CALCULAR VIAJE"
-        android:textColor="@color/black"
+        android:textColor="?attr/text_color"
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,13 +22,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="32dp">
+
 
         //DISTANCIA TRAYECTO
+
         <TextView
             android:id="@+id/title_distancia"
             android:layout_width="match_parent"
@@ -38,7 +43,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Distancia del trayecto:"
-            android:textColor="@color/black"
+            android:textColor="?attr/text_color"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,11 +65,14 @@
                 android:id="@+id/kilometros"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textColor="?attr/text_color" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
         //CONSUMO VEHICULO
+
         <TextView
             android:id="@+id/title_consumo"
             android:layout_width="match_parent"
@@ -75,7 +83,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Consumo del vehículo:"
-            android:textColor="@color/black"
+            android:textColor="?attr/text_color"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -84,12 +92,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/litrosText"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:hint="l/100km"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dialog_car_consumption_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_consumo"
             app:startIconDrawable="@drawable/car">
@@ -98,9 +106,26 @@
                 android:id="@+id/litros"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textColor="?attr/text_color" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/dialog_car_consumption_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:icon="@drawable/arrow"
+            app:layout_constraintBottom_toTopOf="@+id/title_precio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/litrosText"
+            app:layout_constraintTop_toBottomOf="@+id/title_consumo"
+            app:strokeColor="?attr/button_color" />
+
 
         //PRECIO COMBUSTIBLE
 
@@ -114,7 +139,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:text="Precio combustible:"
-            android:textColor="@color/black"
+            android:textColor="?attr/text_color"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -137,20 +162,13 @@
                 android:id="@+id/precio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textColor="?attr/text_color" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     //Dialog car consumption Button
-    <Button
-        android:id="@+id/dialog_car_consumption_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:backgroundTint="#000000"
-        app:icon="@drawable/arrow_down_list"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
