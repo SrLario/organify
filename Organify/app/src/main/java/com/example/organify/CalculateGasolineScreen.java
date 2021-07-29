@@ -19,8 +19,11 @@ public class CalculateGasolineScreen extends AppCompatActivity {
 
     //Variables
     TextInputEditText km, l, precio;
-    Button carConsumptionButton, calculateCostButton;
+    Button carConsumptionButton, costGasolineButton ,calculateCostButton;
+    //ImageView car
     ImageView utilitario, compacto, coupe, berlina, familiar, suv, todoterreno, monovolumen, furgoneta;
+    //ImageView gasoline
+    ImageView sinplomo95, sinplomo98, diesela, dieselaplus, biodiesel, autogas;
 
 
     //Functions
@@ -28,17 +31,19 @@ public class CalculateGasolineScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculate_gasoline_screen);
+
         //Car consumption dialog
         carConsumptionButton = findViewById(R.id.dialog_car_consumption_button);
-
+        //Cost gasoline dialog
+        costGasolineButton = findViewById(R.id.dialog_cost_gasoline_button);
         //CALCULATE COST BUTTON
         calculateCostButton = findViewById(R.id.calculate_cost_button);
-
         //TEXT INPUT LAYOUT
         km = findViewById(R.id.kilometros);
         l = findViewById(R.id.litros);
         precio = findViewById(R.id.precio);
 
+        //Car consumption dialog
         carConsumptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,9 +51,19 @@ public class CalculateGasolineScreen extends AppCompatActivity {
             }
         });
 
+        //Cost gasoline dialog
+        costGasolineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                costGasolineDialog();
+            }
+        });
+
+        //Collect data in other activities
         calculateCostButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //Warning message
                 if (km.getText().toString().isEmpty() || l.getText().toString().isEmpty() || precio.getText().toString().isEmpty()) {
                     Toast.makeText(CalculateGasolineScreen.this, "Debes llenar todas las casillas!", Toast.LENGTH_SHORT).show();
                 } else {
@@ -151,5 +166,68 @@ public class CalculateGasolineScreen extends AppCompatActivity {
         });
 
         createCarConsumptionDialog.show();
+    }
+
+    //Dialog cost gasoline
+    public void costGasolineDialog(){
+        final Dialog createCostGasolineDialog = new Dialog(CalculateGasolineScreen.this);
+        createCostGasolineDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        createCostGasolineDialog.setContentView(R.layout.pick_gasoline);
+
+        sinplomo95 = createCostGasolineDialog.findViewById(R.id.sinplomo95);
+        sinplomo98 = createCostGasolineDialog.findViewById(R.id.sinplomo98);
+        diesela = createCostGasolineDialog.findViewById(R.id.diesela);
+        dieselaplus = createCostGasolineDialog.findViewById(R.id.dieselaplus);
+        biodiesel = createCostGasolineDialog.findViewById(R.id.biodiesel);
+        autogas = createCostGasolineDialog.findViewById(R.id.autogas);
+
+        sinplomo95.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                precio.setText("1.416");
+                createCostGasolineDialog.cancel();
+            }
+        });
+
+        sinplomo98.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                precio.setText("1.571");
+                createCostGasolineDialog.cancel();
+            }
+        });
+
+        diesela.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                precio.setText("1.268");
+                createCostGasolineDialog.cancel();
+            }
+        });
+
+        dieselaplus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                precio.setText("1.364");
+                createCostGasolineDialog.cancel();
+            }
+        });
+
+        biodiesel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                precio.setText("1.249");
+                createCostGasolineDialog.cancel();
+            }
+        });
+
+        autogas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                precio.setText("0.762");
+                createCostGasolineDialog.cancel();
+            }
+        });
+        createCostGasolineDialog.show();
     }
 }

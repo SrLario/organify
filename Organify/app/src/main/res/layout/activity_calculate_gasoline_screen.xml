@@ -111,6 +111,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        //Car consumption button
         <Button
             android:id="@+id/dialog_car_consumption_button"
             style="?attr/materialButtonOutlinedStyle"
@@ -148,12 +149,12 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/precioText"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:hint="€/l"
             app:errorEnabled="true"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dialog_cost_gasoline_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title_precio"
             app:startIconDrawable="@drawable/gasoline">
@@ -167,6 +168,21 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        //Cost gasoline button
+        <Button
+            android:id="@+id/dialog_cost_gasoline_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="60dp"
+            android:layout_height="65dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:icon="@drawable/arrow"
+            app:layout_constraintBottom_toBottomOf="@+id/precioText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_precio"
+            app:strokeColor="?attr/button_color" />
+
+        //Calculate button
         <Button
             android:id="@+id/calculate_cost_button"
             android:layout_width="wrap_content"
