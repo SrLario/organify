@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        //SIN PLOMO 95
+        <ImageView
+            android:id="@+id/sinplomo95"
+            android:layout_width="256dp"
+            android:layout_height="77dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gasoline_sinplomo95" />
+
+        //SIN PLOMO 98
+        <ImageView
+            android:id="@+id/sinplomo98"
+            android:layout_width="256dp"
+            android:layout_height="77dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sinplomo95"
+            app:srcCompat="@drawable/gasoline_sinplomo98" />
+
+        //DIESEL A
+        <ImageView
+            android:id="@+id/diesela"
+            android:layout_width="256dp"
+            android:layout_height="77dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sinplomo98"
+            app:srcCompat="@drawable/gasoline_diesela" />
+
+        //DIESEL A+
+        <ImageView
+            android:id="@+id/dieselaplus"
+            android:layout_width="256dp"
+            android:layout_height="77dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diesela"
+            app:srcCompat="@drawable/gasoline_dieselaplus" />
+
+        //BIODIESEL
+        <ImageView
+            android:id="@+id/biodiesel"
+            android:layout_width="256dp"
+            android:layout_height="77dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dieselaplus"
+            app:srcCompat="@drawable/gasoline_biodiesel" />
+
+        //AUTOGAS
+        <ImageView
+            android:id="@+id/autogas"
+            android:layout_width="256dp"
+            android:layout_height="77dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/biodiesel"
+            app:srcCompat="@drawable/gasoline_autogas" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
