@@ -5,10 +5,11 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:backgroundTint="?attr/background_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         //SIN PLOMO 95
@@ -16,6 +17,11 @@
             android:id="@+id/sinplomo95"
             android:layout_width="256dp"
             android:layout_height="77dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,10 +78,12 @@
             app:srcCompat="@drawable/gasoline_biodiesel" />
 
         //AUTOGAS
+
         <ImageView
             android:id="@+id/autogas"
             android:layout_width="256dp"
             android:layout_height="77dp"
+            android:layout_marginBottom="16dp"
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintBottom_toBottomOf="parent"
