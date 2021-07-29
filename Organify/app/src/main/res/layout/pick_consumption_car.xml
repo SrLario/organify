@@ -3,104 +3,258 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    //Icon Utilitario
-    <ImageView
-        android:id="@+id/utilitario"
-        android:layout_width="128dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/car_consumption_utilitario"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        //UTILITARIO
+        <ImageView
+            android:id="@+id/utilitario"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_utilitario"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text_utilitario"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="65dp"
+            android:gravity="center_horizontal"
+            android:text="Utilitario"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/utilitario" />
 
-    //Icon Compacto
-    <ImageView
-        android:id="@+id/compacto"
-        android:layout_width="128dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/car_consumption_compacto"
-        app:layout_constraintStart_toEndOf="@+id/utilitario"
-        app:layout_constraintTop_toTopOf="parent" />
+        //COMPACTO
+        <ImageView
+            android:id="@+id/compacto"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_compacto"
+            app:layout_constraintStart_toEndOf="@+id/utilitario"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text_compacto"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="65dp"
+            android:gravity="center_horizontal"
+            android:text="Compacto"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/text_utilitario"
+            app:layout_constraintTop_toTopOf="@+id/compacto" />
 
-    //Icon Familiar
-    <ImageView
-        android:id="@+id/familiar"
-        android:layout_width="128dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/car_consumption_familiar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/compacto"
-        app:layout_constraintTop_toTopOf="parent" />
+        //FAMILIAR
+        <ImageView
+            android:id="@+id/familiar"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_familiar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/compacto"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text_familiar"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_horizontal"
+            android:text="Familiar"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/familiar" />
 
-    //Icon Coupe
-    <ImageView
-    android:id="@+id/coupe"
-    android:layout_width="128dp"
-    android:layout_height="77dp"
-    android:layout_marginStart="4dp"
-    android:layout_marginLeft="4dp"
-    android:layout_marginTop="8dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:src="@drawable/car_consumption_coupe"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/utilitario" />
+        //COUPE
+        <ImageView
+            android:id="@+id/coupe"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_coupe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_utilitario" />
+        <TextView
+            android:id="@+id/text_coupe"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="65dp"
+            android:gravity="center_horizontal"
+            android:text="Coupé"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/coupe" />
+
+        //BERLINA
+        <ImageView
+            android:id="@+id/berlina"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_berlina"
+            app:layout_constraintStart_toEndOf="@+id/coupe"
+            app:layout_constraintTop_toBottomOf="@+id/text_compacto" />
+        <TextView
+            android:id="@+id/text_berlina"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="65dp"
+            android:gravity="center_horizontal"
+            android:text="Berlina"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/text_coupe"
+            app:layout_constraintTop_toTopOf="@+id/berlina" />
+
+        //SUV
+        <ImageView
+            android:id="@+id/suv"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_suv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/berlina"
+            app:layout_constraintTop_toBottomOf="@+id/text_familiar" />
+        <TextView
+            android:id="@+id/text_suv"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_horizontal"
+            android:text="SUV"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/suv" />
+
+        //TODOTERRNO
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_todoterreno"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_coupe" />
+        <TextView
+            android:id="@+id/text_todoterreno"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:text="Todoterreno"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+        //MONOVOLUMEN
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_monovolumen"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/text_berlina" />
+        <TextView
+            android:id="@+id/text_monovolumen"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="65dp"
+            android:gravity="center_horizontal"
+            android:text="Coupé"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/text_todoterreno"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+        //FURGONETA
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="128dp"
+            android:layout_height="77dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/car_consumption_furgoneta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_suv" />
+        <TextView
+            android:id="@+id/text_furgoneta"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="center_horizontal"
+            android:text="Furgoneta"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
 
-    //Icon Berlina
-    <ImageView
-    android:id="@+id/berlina"
-    android:layout_width="128dp"
-    android:layout_height="77dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginLeft="8dp"
-    android:layout_marginTop="8dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:src="@drawable/car_consumption_berlina"
-    app:layout_constraintStart_toEndOf="@+id/coupe"
-    app:layout_constraintTop_toBottomOf="@+id/compacto" />
 
-    //Icon SUV
-    <ImageView
-        android:id="@+id/suv"
-        android:layout_width="128dp"
-        android:layout_height="77dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:src="@drawable/car_consumption_suv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/berlina"
-        app:layout_constraintTop_toBottomOf="@+id/familiar" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </LinearLayout>
