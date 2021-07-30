@@ -85,6 +85,7 @@ public class CalculateGasolineScreen extends AppCompatActivity {
                     calculateCost.putExtra("km", km.getText().toString());
                     calculateCost.putExtra("l", l.getText().toString());
                     calculateCost.putExtra("precio", precio.getText().toString());
+                    calculateCost.putExtra("pasajeros", nPassengers.getText().toString());
                     startActivity(calculateCost);
                 }
             }
