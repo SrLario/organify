@@ -7,107 +7,216 @@
     android:background="?attr/background_image_3"
     tools:context=".FinalGasolineCostScreen">
 
-    <TextView
-        android:id="@+id/title_km"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Kilometros"
-        android:textSize="24sp"
+    //KM Image
+
+    <ImageView
+        android:id="@+id/img_km"
+        android:layout_width="400px"
+        android:layout_height="400px"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_km" />
+    //KM description
 
     <TextView
         android:id="@+id/km"
         android:layout_width="57dp"
         android:layout_height="17dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/lucida_console"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_km" />
+        android:textColor="?attr/text_color_reverse"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_km"
+        app:layout_constraintEnd_toEndOf="@+id/img_km"
+        app:layout_constraintStart_toStartOf="@+id/img_km" />
 
-    <TextView
-        android:id="@+id/title_l"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Litros"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/km" />
 
-    <TextView
-        android:id="@+id/l"
-        android:layout_width="57dp"
-        android:layout_height="17dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_l" />
+    //PRECIO image
 
-    <TextView
-        android:id="@+id/title_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Precio"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="400px"
+        android:layout_height="170px"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/info_costfuel" />
+    //PRECIO description
 
     <TextView
         android:id="@+id/price"
-        android:layout_width="57dp"
+        android:layout_width="74dp"
         android:layout_height="17dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"/>
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:fontFamily="@font/lucida_console"
+        android:text="TextView"
+        android:textColor="?attr/text_color_reverse"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
+
+    //LITROS image
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="400px"
+        android:layout_height="170px"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/info_l" />
+    //LITROS description
 
     <TextView
-        android:id="@+id/title_people"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Personas:"/>
+        android:id="@+id/l"
+        android:layout_width="74dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/lucida_console"
+        android:text="TextView"
+        android:textColor="?attr/text_color_reverse"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+
+    //PEOPLE image
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="400px"
+        android:layout_height="170px"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/info_people" />
+    //PEOPLE description
 
     <TextView
         android:id="@+id/people"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"/>
-
-
-    //TOTAL title
-
-    <TextView
-        android:id="@+id/title_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginBottom="64dp"
-        android:text="Total"
-        android:fontFamily="@font/lucida_console"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-    //TOTAL descripton
-
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="25dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:fontFamily="@font/lucida_console"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textColor="?attr/text_color_reverse"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    //EQUIPAJE image
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="400px"
+        android:layout_height="170px"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginRight="46dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_km"
+        app:srcCompat="@drawable/info_suitcase" />
+    //EQUIPAJE description
+
+    <TextView
+        android:id="@+id/text_equipaje"
+        android:layout_width="25dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:fontFamily="@font/lucida_console"
+        android:text="SI"
+        android:textColor="?attr/text_color_reverse"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    //TOTAL
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        //TOTAL title
+
+        <TextView
+            android:id="@+id/title_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/lucida_console"
+            android:text="Total:"
+            android:textColor="?attr/text_color_reverse"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/total"
+            app:layout_constraintStart_toStartOf="parent" />
+        //TOTAL descripton
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/lucida_console"
+            android:text="TextView"
+            android:textColor="?attr/text_color_reverse"
+            android:textSize="35sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/title_total" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lucida_console"
+            android:text="Precio por persona: 5.12€"
+            android:textColor="?attr/text_color_reverse"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
