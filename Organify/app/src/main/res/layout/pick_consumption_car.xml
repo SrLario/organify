@@ -9,7 +9,7 @@
     android:backgroundTint="?attr/background_color_grey">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         //UTILITARIO
@@ -35,6 +35,7 @@
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
             android:textColor="?attr/text_color"
+            android:fontFamily="@font/lucida_console"
             android:text="Utilitario"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,39 +65,37 @@
             android:gravity="center_horizontal"
             android:textColor="?attr/text_color"
             android:text="Compacto"
+            android:fontFamily="@font/lucida_console"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/text_utilitario"
             app:layout_constraintTop_toTopOf="@+id/compacto" />
 
         //FAMILIAR
+
         <ImageView
             android:id="@+id/familiar"
             android:layout_width="128dp"
             android:layout_height="77dp"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/car_consumption_familiar"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/compacto"
             app:layout_constraintTop_toTopOf="parent"
             app:tint="?attr/text_color" />
+
         <TextView
             android:id="@+id/text_familiar"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
+            android:fontFamily="@font/lucida_console"
             android:gravity="center_horizontal"
-            android:textColor="?attr/text_color"
             android:text="Familiar"
             android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="?attr/text_color"
+            app:layout_constraintStart_toEndOf="@+id/text_compacto"
             app:layout_constraintTop_toTopOf="@+id/familiar" />
 
         //COUPE
@@ -122,6 +121,7 @@
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
             android:textColor="?attr/text_color"
+            android:fontFamily="@font/lucida_console"
             android:text="Coupé"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -150,40 +150,38 @@
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
             android:textColor="?attr/text_color"
+            android:fontFamily="@font/lucida_console"
             android:text="Berlina"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/text_coupe"
             app:layout_constraintTop_toTopOf="@+id/berlina" />
 
         //SUV
+
         <ImageView
             android:id="@+id/suv"
             android:layout_width="128dp"
             android:layout_height="77dp"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/car_consumption_suv"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/berlina"
             app:layout_constraintTop_toBottomOf="@+id/text_familiar"
             app:tint="?attr/text_color" />
+
         <TextView
             android:id="@+id/text_suv"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
-            android:textColor="?attr/text_color"
             android:gravity="center_horizontal"
             android:text="SUV"
             android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/lucida_console"
+            android:textColor="?attr/text_color"
+            app:layout_constraintStart_toEndOf="@+id/text_berlina"
             app:layout_constraintTop_toTopOf="@+id/suv" />
 
         //TODOTERRNO
@@ -210,6 +208,7 @@
             android:layout_marginBottom="16dp"
             android:gravity="center_horizontal"
             android:textColor="?attr/text_color"
+            android:fontFamily="@font/lucida_console"
             android:text="Todoterreno"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -239,37 +238,37 @@
             android:layout_marginTop="65dp"
             android:gravity="center_horizontal"
             android:textColor="?attr/text_color"
+            android:fontFamily="@font/lucida_console"
             android:text="Monovolumen"
             android:textAlignment="center"
             app:layout_constraintStart_toEndOf="@+id/text_todoterreno"
             app:layout_constraintTop_toTopOf="@+id/monovolumen" />
 
         //FURGONETA
+
         <ImageView
             android:id="@+id/furgoneta"
             android:layout_width="128dp"
             android:layout_height="77dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/car_consumption_furgoneta"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/monovolumen"
             app:layout_constraintTop_toBottomOf="@+id/text_suv"
             app:tint="?attr/text_color" />
+
         <TextView
             android:id="@+id/text_furgoneta"
             android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="65dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp"
             android:gravity="center_horizontal"
-            android:textColor="?attr/text_color"
             android:text="Furgoneta"
             android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/lucida_console"
+            android:textColor="?attr/text_color"
+            app:layout_constraintStart_toEndOf="@+id/text_monovolumen"
             app:layout_constraintTop_toTopOf="@+id/furgoneta" />
 
 
