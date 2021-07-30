@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".NewTravel">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -28,7 +28,11 @@
             android:backgroundTint="#81C234"
             android:clickable="true"
             android:focusable="true"
-            android:gravity="center">
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,6 +59,7 @@
         //FOOD
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -63,7 +68,11 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout6"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textView2"
@@ -87,78 +96,100 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        //PERSONS
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="@drawable/round_border"
-            android:backgroundTint="#2196F3"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="horizontal">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
+
+            //PERSONS
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Personas"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/group_icon"
+                android:layout_margin="15dp"
+                android:background="@drawable/round_border"
+                android:backgroundTint="#2196F3"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+                app:layout_constraintTop_toTopOf="parent">
 
-        //ACTIVITIES
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:text="Personas"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="@drawable/round_border"
-            android:backgroundTint="#E83C3C"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/group_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
+            //ACTIVITIES
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Actividades"
-                android:textColor="@color/black"
-                android:textSize="40sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                android:layout_margin="15dp"
+                android:background="@drawable/round_border"
+                android:backgroundTint="#E83C3C"
+                android:layout_weight="0.5"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/activities_icon"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:text="Actividades"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/activities_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
         //STAY
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
@@ -167,7 +198,11 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -190,6 +225,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
