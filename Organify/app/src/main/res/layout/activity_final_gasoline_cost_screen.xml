@@ -91,18 +91,21 @@
         app:layout_constraintTop_toBottomOf="@+id/title_total" />
 
     <TextView
-        android:id="@+id/people"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Personas:"
-        tools:layout_editor_absoluteX="9dp"
-        tools:layout_editor_absoluteY="176dp" />
-
-    <TextView
         android:id="@+id/title_people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Personas:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/people"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="202dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_people" />
 </androidx.constraintlayout.widget.ConstraintLayout>

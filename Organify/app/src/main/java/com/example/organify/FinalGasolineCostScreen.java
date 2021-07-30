@@ -17,7 +17,7 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         km = findViewById(R.id.km);
         l = findViewById(R.id.l);
         price = findViewById(R.id.price);
-        people = findViewById(R.id.numberPassengers);
+        people = findViewById(R.id.people);
         total = findViewById(R.id.total);
 
         Intent calculateGasoline = getIntent();
