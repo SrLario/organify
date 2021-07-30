@@ -23,11 +23,12 @@
 
     <TextView
         android:id="@+id/km"
-        android:layout_width="57dp"
-        android:layout_height="17dp"
+        android:layout_width="140sp"
+        android:layout_height="25sp"
         android:layout_marginBottom="35dp"
         android:fontFamily="@font/lucida_console"
         android:text="TextView"
+        android:gravity="center"
         android:textColor="?attr/text_color_reverse"
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="@+id/img_km"
@@ -51,12 +52,12 @@
 
     <TextView
         android:id="@+id/price"
-        android:layout_width="74dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
+        android:layout_width="90sp"
+        android:layout_height="25sp"
+        android:layout_marginStart="40dp"
         android:fontFamily="@font/lucida_console"
         android:text="TextView"
+        android:gravity="center"
         android:textColor="?attr/text_color_reverse"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -81,12 +82,12 @@
 
     <TextView
         android:id="@+id/l"
-        android:layout_width="74dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_width="100sp"
+        android:layout_height="25sp"
+        android:layout_marginStart="32dp"
         android:fontFamily="@font/lucida_console"
         android:text="TextView"
+        android:gravity="center"
         android:textColor="?attr/text_color_reverse"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
@@ -111,11 +112,11 @@
 
     <TextView
         android:id="@+id/people"
-        android:layout_width="25dp"
-        android:layout_height="17dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
+        android:layout_width="50sp"
+        android:layout_height="25sp"
+        android:layout_marginStart="60dp"
         android:fontFamily="@font/lucida_console"
+        android:gravity="center"
         android:text="TextView"
         android:textColor="?attr/text_color_reverse"
         android:textSize="20dp"
@@ -140,12 +141,12 @@
 
     <TextView
         android:id="@+id/text_equipaje"
-        android:layout_width="25dp"
-        android:layout_height="17dp"
+        android:layout_width="70sp"
+        android:layout_height="25sp"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:fontFamily="@font/lucida_console"
         android:text="SI"
+        android:gravity="center"
         android:textColor="?attr/text_color_reverse"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
@@ -211,6 +212,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            android:id="@+id/priceXperson"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lucida_console"

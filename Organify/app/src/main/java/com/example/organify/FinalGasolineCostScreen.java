@@ -12,7 +12,7 @@ import java.text.DecimalFormatSymbols;
 
 public class FinalGasolineCostScreen extends AppCompatActivity {
 
-    TextView km, l, price, people, total, equipaje;
+    TextView km, l, price, people, total, equipaje, priceXperson;
 
     @SuppressLint({"DefaultLocale", "SetTextI18n"})
     @Override
@@ -25,6 +25,7 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         people = findViewById(R.id.people);
         equipaje = findViewById(R.id.text_equipaje);
         total = findViewById(R.id.total);
+        priceXperson = findViewById(R.id.priceXperson);
 
         Intent calculateGasoline = getIntent();
         Bundle b = calculateGasoline.getExtras();
@@ -46,7 +47,7 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         String precio = (String) b.get("precio");
         price.setText(precio);
         Double precio_gasolina = Double.parseDouble(price.getText().toString());
-        price.setText(precio + " €");
+        price.setText(precio + "€");
 
         //PEOPLE
         String persona = (String) b.get("pasajeros");
@@ -65,6 +66,7 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
             precio_equipaje = 0.0;
         }
 
+
         //TOTAL
         double precio_persona = 0.33f;
         double gasolina_usada = distancia_kilometros * litros_gasolina / 100;
@@ -72,5 +74,10 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         String precio_total = String.valueOf(total_gasolina + (precio_equipaje + precio_persona) * total_personas);
         Double ptotal = Double.parseDouble(precio_total);
         total.setText(String.format("%.2f", ptotal) + " €");
+
+
+        //PRICE X PERSON
+        Double precioXpersona = ptotal / total_personas;
+        priceXperson.setText(String.format("Precio por persona: %.2f", precioXpersona) + " €");
     }
 }
