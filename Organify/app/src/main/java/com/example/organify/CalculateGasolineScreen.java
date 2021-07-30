@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class CalculateGasolineScreen extends AppCompatActivity {
     TextView nPassengers;
     com.google.android.material.slider.Slider passengers;
     Button carConsumptionButton, costGasolineButton ,calculateCostButton;
+    Switch equipaje;
     //ImageView car
     ImageView utilitario, compacto, coupe, berlina, familiar, suv, todoterreno, monovolumen, furgoneta;
     //ImageView gasoline
@@ -49,6 +51,7 @@ public class CalculateGasolineScreen extends AppCompatActivity {
         precio = findViewById(R.id.precio);
         passengers = findViewById(R.id.passengers);
         nPassengers = findViewById(R.id.numberPassengers);
+        equipaje = findViewById(R.id.equipaje);
 
         passengers.addOnChangeListener(new Slider.OnChangeListener() {
             @Override
@@ -86,6 +89,11 @@ public class CalculateGasolineScreen extends AppCompatActivity {
                     calculateCost.putExtra("l", l.getText().toString());
                     calculateCost.putExtra("precio", precio.getText().toString());
                     calculateCost.putExtra("pasajeros", nPassengers.getText().toString());
+                    if (equipaje.isChecked()) {
+                        calculateCost.putExtra("equipaje", "si");
+                    } else {
+                        calculateCost.putExtra("equipaje", "no");
+                    }
                     startActivity(calculateCost);
                 }
             }
