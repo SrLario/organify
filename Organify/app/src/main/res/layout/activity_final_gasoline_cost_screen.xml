@@ -7,6 +7,7 @@
     android:background="?attr/background_image_3"
     tools:context=".FinalGasolineCostScreen">
 
+    //KM title
     <TextView
         android:id="@+id/title_km"
         android:layout_width="wrap_content"
@@ -17,49 +18,56 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+    //KM description
     <TextView
         android:id="@+id/km"
         android:layout_width="57dp"
         android:layout_height="17dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_km" />
+        android:text="TextView"/>
 
+    //LITROS title
     <TextView
         android:id="@+id/title_l"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Litros"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/km" />
-
+        android:textSize="24sp"/>
+    //LITROS description
     <TextView
         android:id="@+id/l"
         android:layout_width="57dp"
         android:layout_height="17dp"
         android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_l" />
+        android:text="TextView"/>
 
+    //EQUIPAJE title
+    <TextView
+        android:id="@+id/title_equipaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Equipaje"
+        android:textSize="24sp"/>
+    //EQUIPAJE description
+    <TextView
+        android:id="@+id/text_equipaje"
+        android:layout_width="57dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="8dp"
+        android:text="TextView"/>
+
+
+    //PRECIO title
     <TextView
         android:id="@+id/title_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Precio"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/l" />
-
+        android:textSize="24sp"/>
+    //PRECIO description
     <TextView
         android:id="@+id/price"
         android:layout_width="57dp"
@@ -68,13 +76,14 @@
         android:text="TextView"/>
 
 
+    //PEOPLE title
     <TextView
         android:id="@+id/title_people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Personas:"/>
-
+    //PEOPLE description
     <TextView
         android:id="@+id/people"
         android:layout_width="wrap_content"
@@ -83,31 +92,33 @@
 
 
     //TOTAL title
-
     <TextView
         android:id="@+id/title_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginBottom="64dp"
-        android:text="Total"
+        android:layout_marginBottom="50dp"
         android:fontFamily="@font/lucida_console"
+        android:textColor="?attr/text_color_reverse"
+        android:text="Total:"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
     //TOTAL descripton
-
     <TextView
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="50dp"
         android:fontFamily="@font/lucida_console"
+        android:textColor="?attr/text_color_reverse"
         android:text="TextView"
-        android:textSize="24sp"
+        android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/title_total" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
