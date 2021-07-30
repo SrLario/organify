@@ -19,5 +19,6 @@
         <item name="background_color_grey">@color/diesel_A</item>
         <item name="background_image">@drawable/backgrround_lake_blue_dark_theme</item>
         <item name="background_image_2">@drawable/backgrround_lake_blue_dark_theme_2</item>
+        <item name="background_image_3">@drawable/backgrround_lake_blue_bot_dark_theme</item>
     </style>
 </resources>
