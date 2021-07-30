@@ -1,5 +1,6 @@
 package com.example.organify;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -10,8 +11,10 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.slider.Slider;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -19,6 +22,8 @@ public class CalculateGasolineScreen extends AppCompatActivity {
 
     //Variables
     TextInputEditText km, l, precio;
+    TextView nPassengers;
+    com.google.android.material.slider.Slider passengers;
     Button carConsumptionButton, costGasolineButton ,calculateCostButton;
     //ImageView car
     ImageView utilitario, compacto, coupe, berlina, familiar, suv, todoterreno, monovolumen, furgoneta;
@@ -42,6 +47,15 @@ public class CalculateGasolineScreen extends AppCompatActivity {
         km = findViewById(R.id.kilometros);
         l = findViewById(R.id.litros);
         precio = findViewById(R.id.precio);
+        passengers = findViewById(R.id.passengers);
+        nPassengers = findViewById(R.id.numberPassengers);
+
+        passengers.addOnChangeListener(new Slider.OnChangeListener() {
+            @Override
+            public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
+                nPassengers.setText(String.valueOf((int)value));
+            }
+        });
 
         //Car consumption dialog
         carConsumptionButton.setOnClickListener(new View.OnClickListener() {
