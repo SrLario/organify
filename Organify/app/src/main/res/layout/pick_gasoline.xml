@@ -13,6 +13,7 @@
         android:layout_height="wrap_content">
 
         //SIN PLOMO 95
+
         <ImageView
             android:id="@+id/sinplomo95"
             android:layout_width="256dp"
@@ -25,11 +26,27 @@
             android:clickable="true"
             android:focusable="true"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/gasoline_sinplomo95" />
 
+        <TextView
+            android:id="@+id/text_sinplomo95"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:fontFamily="@font/lucida_console"
+            android:text="SIN PLOMO 95"
+            app:layout_constraintBottom_toBottomOf="@+id/sinplomo95"
+            app:layout_constraintEnd_toEndOf="@+id/sinplomo95"
+            app:layout_constraintStart_toStartOf=" @+id/sinplomo95"
+            app:layout_constraintTop_toTopOf="@+id/sinplomo95" />
+
+
         //SIN PLOMO 98
+
         <ImageView
             android:id="@+id/sinplomo98"
             android:layout_width="256dp"
@@ -40,6 +57,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sinplomo95"
             app:srcCompat="@drawable/gasoline_sinplomo98" />
+
+        <TextView
+            android:id="@+id/text_sinplomo98"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lucida_console"
+            android:text="SIN PLOMO 98"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sinplomo98"
+            app:layout_constraintEnd_toEndOf="@+id/sinplomo98"
+            app:layout_constraintStart_toStartOf="@+id/sinplomo98"
+            app:layout_constraintTop_toBottomOf="@+id/sinplomo95" />
+
 
         //DIESEL A
         <ImageView
@@ -53,7 +84,22 @@
             app:layout_constraintTop_toBottomOf="@+id/sinplomo98"
             app:srcCompat="@drawable/gasoline_diesela" />
 
+        <TextView
+            android:id="@+id/text_diesela"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lucida_console"
+            android:text="DIESEL A"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/diesela"
+            app:layout_constraintEnd_toEndOf="@+id/diesela"
+            app:layout_constraintStart_toStartOf="@+id/diesela"
+            app:layout_constraintTop_toBottomOf="@+id/sinplomo98" />
+
+
         //DIESEL A+
+
         <ImageView
             android:id="@+id/dieselaplus"
             android:layout_width="256dp"
@@ -64,6 +110,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/diesela"
             app:srcCompat="@drawable/gasoline_dieselaplus" />
+
+        <TextView
+            android:id="@+id/text_dieselaplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lucida_console"
+            android:text="DIESEL A+"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/dieselaplus"
+            app:layout_constraintEnd_toEndOf="@+id/dieselaplus"
+            app:layout_constraintStart_toStartOf="@+id/dieselaplus"
+            app:layout_constraintTop_toBottomOf="@+id/diesela" />
+
 
         //BIODIESEL
         <ImageView
@@ -76,6 +136,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dieselaplus"
             app:srcCompat="@drawable/gasoline_biodiesel" />
+        <TextView
+            android:id="@+id/text_biodiesel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lucida_console"
+            android:text="BIODIESEL"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/biodiesel"
+            app:layout_constraintEnd_toEndOf="@+id/biodiesel"
+            app:layout_constraintStart_toStartOf="@+id/biodiesel"
+            app:layout_constraintTop_toBottomOf="@+id/dieselaplus" />
+
 
         //AUTOGAS
 
@@ -91,6 +164,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/biodiesel"
             app:srcCompat="@drawable/gasoline_autogas" />
+
+        <TextView
+            android:id="@+id/text_autogas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lucida_console"
+            android:text="AUTOGAS"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="@+id/autogas"
+            app:layout_constraintEnd_toEndOf="@+id/autogas"
+            app:layout_constraintStart_toStartOf="@+id/autogas"
+            app:layout_constraintTop_toBottomOf="@+id/biodiesel" />
 
 
 
