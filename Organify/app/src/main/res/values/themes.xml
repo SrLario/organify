@@ -18,5 +18,7 @@
         <item name="text_color_reverse">@color/white</item>
         <item name="background_color_grey">@color/white</item>
         <item name="background_image">@drawable/backgrround_lake_blue</item>
+        <item name="background_image_2">@drawable/backgrround_lake_blue_2</item>
+
     </style>
 </resources>
