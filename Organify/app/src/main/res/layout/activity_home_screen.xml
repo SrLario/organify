@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeScreen"
-    android:background="?attr/background_color">
+    android:background="?attr/background_color"
+    tools:context=".HomeScreen">
 
-    <ImageView
-        android:id="@+id/load_travel_button"
+    <ImageView        android:id="@+id/load_travel_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
@@ -18,8 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/load_travel_foreground"
-        tools:ignore="VectorDrawableCompat"
-        app:tint="?attr/button_color"/>
+        app:tint="?attr/button_color"
+        tools:ignore="VectorDrawableCompat" />
 
     <ImageView
         android:id="@+id/new_travel_button"
@@ -32,6 +31,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/icon"
-        tools:ignore="VectorDrawableCompat"
-        app:tint="?attr/button_color" />
+        app:tint="?attr/button_color"
+        tools:ignore="VectorDrawableCompat" />
 </androidx.constraintlayout.widget.ConstraintLayout>
