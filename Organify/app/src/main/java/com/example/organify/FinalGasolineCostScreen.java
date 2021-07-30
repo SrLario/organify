@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 public class FinalGasolineCostScreen extends AppCompatActivity {
 
-    TextView km, l, price, total;
+    TextView km, l, price, people, total;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         km = findViewById(R.id.km);
         l = findViewById(R.id.l);
         price = findViewById(R.id.price);
+        people = findViewById(R.id.numberPassengers);
         total = findViewById(R.id.total);
 
         Intent calculateGasoline = getIntent();
@@ -37,10 +38,15 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         price.setText(precio);
         Double precio_gasolina = Double.parseDouble(price.getText().toString());
 
+        //PEOPLE
+        String persona = (String) b.get("pasajeros");
+        people.setText(persona);
+        Double precio_persona = Double.parseDouble(people.getText().toString());
+
         //TOTAL
         double gasolina_usada = distancia_kilometros * litros_gasolina / 100;
         double total_gasolina = gasolina_usada * precio_gasolina;
-        String precio_total = String.valueOf(total_gasolina);
+        String precio_total = String.valueOf(total_gasolina + (precio_persona * 0.33));
         total.setText(precio_total);
     }
 }
