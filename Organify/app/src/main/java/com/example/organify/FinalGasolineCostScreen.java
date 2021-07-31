@@ -41,7 +41,6 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         String litros = (String) b.get("l");
         l.setText(litros);
         Double litros_gasolina = Double.parseDouble(l.getText().toString());
-        l.setText(litros + " l");
 
         //PRECIO
         String precio = (String) b.get("precio");
@@ -70,6 +69,7 @@ public class FinalGasolineCostScreen extends AppCompatActivity {
         //TOTAL
         double precio_persona = 0.33f;
         double gasolina_usada = distancia_kilometros * litros_gasolina / 100;
+        l.setText(String.format("%.2f", gasolina_usada) + " l");
         double total_gasolina = gasolina_usada * precio_gasolina;
         String precio_total = String.valueOf(total_gasolina + (precio_equipaje + precio_persona) * total_personas);
         Double ptotal = Double.parseDouble(precio_total);
